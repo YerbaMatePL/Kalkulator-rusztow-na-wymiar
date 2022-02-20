@@ -1,0 +1,21 @@
+.calculateBtn {
+    position: relative;
+    right: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #1a8fd3;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: transform .3s ease-in;
+}
+
+.calculateBtn:hover {
+    transform: scale(1.1);
+}
+.calculateBtn:active{
+    transform: scale(0.8);
+}

@@ -1,0 +1,111 @@
+import React, { useState } from 'react';
+import './Calculator.css';
+import CalculatorPrice from './CalculatorPrice/CalculatorPrice';
+
+function Calculator() {
+	// Stan inputa szerokości
+
+	const [inputWidthValue, setInputWidthValue] = useState('');
+
+	const updateInputWidthHandler = (e) => {
+		setInputWidthValue(e.target.value);
+	};
+
+	// Stan inputa głębokości
+
+	const [inputDepthValue, setInputDepthValue] = useState('');
+
+	const updateDepthValue = (e) => {
+		setInputDepthValue(e.target.value);
+	};
+
+	// Stan typu rusztu
+
+	const [typeFireGrate, setTypeFireGrate] = useState('13.5');
+
+	const checkTypeFireGrate = (e) => {
+		setTypeFireGrate(e.target.value);
+	};
+
+	// Stan ilości sztuk
+
+	const [quantity, setQuantity] = useState('1');
+
+	const checkQuantityFireGrate = (e) => {
+		setQuantity(parseFloat(e.target.value));
+	};
+
+
+	// Funkcja do liczenia ceny
+
+	const priceHandler = (width,depth,type,quantity) => {
+		return (width*depth*type*quantity/100) 
+	}
+
+	const price = (priceHandler(parseFloat(inputWidthValue),parseFloat(inputDepthValue),parseFloat(typeFireGrate), parseFloat(quantity))).toFixed(2);
+	
+
+
+
+	return (
+		<div className='calculator'>
+			<div className='calculator__items'>
+				<div className='calculator__items--fireGrate'>
+					<label for='fireGrate'>Typ rusztu</label>
+					<select
+						value={typeFireGrate}
+						onChange={checkTypeFireGrate}
+						id='fireGrate'
+					>
+						<option value='13.5'>Żeliwo szare gr. 11mm</option>
+						<option value='20.5'>Żeliwo chromowe gr. 11mm</option>
+						<option value='18.6'>Stalowy z pudłużnych prętów</option>
+						{/* <option value='34'>Ruszt stojący bez popelnika</option>
+						<option value='5'>Ruszt stojący z popelnikiem</option> */}
+					</select>
+				</div>
+				<div className='calculator__items--grateWidth'>
+					<label for='grateWidth'>Szerokość rusztu w cm</label>
+					<input
+						onChange={updateInputWidthHandler}
+						id='grateWidth'
+						type='number'
+						placeholder='Podaj szerokość rusztu w cm'
+						step='0.5'
+						value={inputWidthValue}
+					></input>
+				</div>
+
+				<div className='calculator__items--grateDepth'>
+					<label for='grateDepth'>Głębokość rusztu w cm</label>
+					<input
+						onChange={updateDepthValue}
+						id='grateDepth'
+						type='number'
+						placeholder='Podaj głębokość rusztu w cm'
+						step='0.5'
+						value={inputDepthValue}
+					></input>
+				</div>
+
+				<div className='calculator__items--fireGrateAmount'>
+					<label for='fireGrateAmount'>Ilość sztuk</label>
+					<select
+						value={quantity}
+						id='fireGrateAmount'
+						onChange={checkQuantityFireGrate}
+					>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+						<option value='5'>5</option>
+					</select>
+				</div>
+			</div>
+			<CalculatorPrice price={price}/>
+		</div>
+	);
+}
+
+export default Calculator;

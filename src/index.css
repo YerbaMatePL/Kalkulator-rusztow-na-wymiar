@@ -1,13 +1,29 @@
-body {
+@import url('http://fonts.cdnfonts.com/css/squad');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: 'Squad', sans-serif;
+  font-size: 10px;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #121212;
+  background-image: linear-gradient(139deg, #246828ef 0%, #2fb3df 100%);
+  
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
