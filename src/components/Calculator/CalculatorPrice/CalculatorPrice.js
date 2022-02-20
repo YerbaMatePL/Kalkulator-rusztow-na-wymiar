@@ -11,7 +11,6 @@ function CalculatorPrice(props) {
 			setPrice(amount);
 		}
 	};
-	// props.priceHandler;
 
 	return (
 		<div className='calculator__price'>
