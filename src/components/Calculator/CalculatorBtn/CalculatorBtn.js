@@ -1,12 +1,10 @@
 import './CalculatorBtn.css';
 
-function CalculatorBtn(props) {
+function CalculatorBtn() {
 
 	const priceHandler = () => {
 		console.log('To jest nowa cena')
 	}
-
-
 
 	return (
 		<div>

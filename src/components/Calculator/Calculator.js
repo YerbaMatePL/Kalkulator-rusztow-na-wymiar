@@ -35,17 +35,18 @@ function Calculator() {
 		setQuantity(parseFloat(e.target.value));
 	};
 
-
 	// Funkcja do liczenia ceny
 
-	const priceHandler = (width,depth,type,quantity) => {
-		return (width*depth*type*quantity/100) 
-	}
+	const priceHandler = () => {
+		const width = parseFloat(inputWidthValue);
+		const depth = parseFloat(inputDepthValue);
+		const type = parseFloat(typeFireGrate);
+		const amount = parseFloat(quantity);
 
-	const price = (priceHandler(parseFloat(inputWidthValue),parseFloat(inputDepthValue),parseFloat(typeFireGrate), parseFloat(quantity))).toFixed(2);
-	
+		const result = (width * depth * type * amount) / 100;
 
-
+		return result.toFixed(2);
+	};
 
 	return (
 		<div className='calculator'>
@@ -103,7 +104,7 @@ function Calculator() {
 					</select>
 				</div>
 			</div>
-			<CalculatorPrice price={price}/>
+			<CalculatorPrice priceHandler={priceHandler} />
 		</div>
 	);
 }

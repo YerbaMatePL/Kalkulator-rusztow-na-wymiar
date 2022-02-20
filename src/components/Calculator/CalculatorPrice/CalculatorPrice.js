@@ -1,16 +1,24 @@
 import './CalculatorPrice.css';
-import CalculatorBtn from '../CalculatorBtn/CalculatorBtn';
+import { useState } from 'react';
 
 function CalculatorPrice(props) {
+	const [price, setPrice] = useState(0);
 
-	const currentPrice = props.price;
+	const priceHandler = () => {
+		const amount = props.priceHandler();
+
+		if (!isNaN(amount)) {
+			setPrice(amount);
+		}
+	};
+	// props.priceHandler;
 
 	return (
 		<div className='calculator__price'>
-			<CalculatorBtn />
+			<button onClick={priceHandler}>Oblicz</button>
 			<div className='calculator__price__box'>
 				<h3 className='calculator__price__title'>Cena</h3>
-				<p className='calculator__price__text'>{isNaN(currentPrice)? <span></span> : <span>{currentPrice}</span>} zł</p>
+				<p className='calculator__price__text'>{<span>{price}</span>} zł</p>
 			</div>
 		</div>
 	);
