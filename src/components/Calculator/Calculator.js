@@ -38,6 +38,8 @@ function Calculator() {
 	// Funkcja do liczenia ceny
 
 	const priceHandler = () => {
+		validation();
+		
 		const width = parseFloat(inputWidthValue);
 		const depth = parseFloat(inputDepthValue);
 		const type = parseFloat(typeFireGrate);
@@ -47,6 +49,10 @@ function Calculator() {
 
 		return result.toFixed(2);
 	};
+
+	function validation() {
+
+	}
 
 	return (
 		<div className='calculator'>
@@ -75,6 +81,7 @@ function Calculator() {
 						step='0.5'
 						value={inputWidthValue}
 					></input>
+					<p className='errorInfo'></p>
 				</div>
 
 				<div className='calculator__items--grateDepth'>

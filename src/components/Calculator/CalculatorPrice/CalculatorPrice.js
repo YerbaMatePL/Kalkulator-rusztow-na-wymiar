@@ -14,7 +14,7 @@ function CalculatorPrice(props) {
 
 	return (
 		<div className='calculator__price'>
-			<button onClick={priceHandler}>Oblicz</button>
+			<button  className='calculator__calculateBtn' onClick={priceHandler}>Oblicz</button>
 			<div className='calculator__price__box'>
 				<h3 className='calculator__price__title'>Cena</h3>
 				<p className='calculator__price__text'>{<span>{price}</span>} zł</p>
