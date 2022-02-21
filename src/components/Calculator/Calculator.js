@@ -35,11 +35,16 @@ function Calculator() {
 		setQuantity(parseFloat(e.target.value));
 	};
 
-	// Funkcja do liczenia ceny
+	// Stan dla walidacji inputa z szerokością
+
+	const [widthValidation, setWidthValidation] = useState(false);
+	const [depthValidation, setDepthValidation] = useState(false);
+
+	// Funkcja do liczenia ceny i walidacja
 
 	const priceHandler = () => {
 		validation();
-		
+
 		const width = parseFloat(inputWidthValue);
 		const depth = parseFloat(inputDepthValue);
 		const type = parseFloat(typeFireGrate);
@@ -51,8 +56,12 @@ function Calculator() {
 	};
 
 	function validation() {
+		inputWidthValue === '' ? setWidthValidation(true) : setWidthValidation(false)
+		inputDepthValue === '' ? setDepthValidation(true) : setDepthValidation(false)
+	};
 
-	}
+	const ShowWidthError = (widthValidation === true ? <p> ⬆ Musisz podać szerokość rusztu</p> : false);
+	const ShowDepthError = (depthValidation === true ? <p> ⬆ Musisz podać głębokość rusztu</p> : false);
 
 	return (
 		<div className='calculator'>
@@ -81,7 +90,7 @@ function Calculator() {
 						step='0.5'
 						value={inputWidthValue}
 					></input>
-					<p className='errorInfo'></p>
+					<div className='errorInfo'>{ShowWidthError}</div>
 				</div>
 
 				<div className='calculator__items--grateDepth'>
@@ -94,6 +103,7 @@ function Calculator() {
 						step='0.5'
 						value={inputDepthValue}
 					></input>
+					<div className='errorInfo'>{ShowDepthError}</div>
 				</div>
 
 				<div className='calculator__items--fireGrateAmount'>

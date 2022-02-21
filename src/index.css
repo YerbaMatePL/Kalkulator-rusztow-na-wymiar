@@ -1,5 +1,9 @@
 @import url('http://fonts.cdnfonts.com/css/squad');
 
+:root {
+  --error-color: rgb(231, 83, 83);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
