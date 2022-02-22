@@ -2,6 +2,7 @@
 
 :root {
   --error-color: rgb(231, 83, 83);
+  --border-img: rgb(206, 200, 200);
 }
 
 * {

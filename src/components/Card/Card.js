@@ -1,8 +1,20 @@
 import './Card.css';
 import Calculator from '../Calculator/Calculator';
 import Informations from '../Informations/Informations';
+import React, { useState } from 'react';
+import { grateTypes } from '../../data/grateData';
 
 function Card() {
+	const [grateType, setGrateType] = useState(grateTypes[0]);
+
+	const updateStateValue = (dataFromCalculator) => {
+		const grate = grateTypes.filter(function (grate) {
+			return grate.expectedValue === dataFromCalculator;
+		});
+
+		setGrateType(grate[0]);
+	};
+
 	return (
 		<div className='card'>
 			<div className='card__title'>
@@ -21,8 +33,8 @@ function Card() {
 				</svg>
 			</button>
 			<div className='card__boxes'>
-				<Calculator />
-				<Informations />
+				<Calculator updateStateTypeGrate={updateStateValue} />
+				<Informations grateTypeInfo={grateType} />
 			</div>
 		</div>
 	);

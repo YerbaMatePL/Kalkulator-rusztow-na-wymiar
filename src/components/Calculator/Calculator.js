@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calculator.css';
 import CalculatorPrice from './CalculatorPrice/CalculatorPrice';
 
-function Calculator() {
+function Calculator(props) {
 	// Stan inputa szerokości
 
 	const [inputWidthValue, setInputWidthValue] = useState('');
@@ -17,6 +17,7 @@ function Calculator() {
 
 	const updateDepthValue = (e) => {
 		setInputDepthValue(e.target.value);
+		
 	};
 
 	// Stan typu rusztu
@@ -25,6 +26,7 @@ function Calculator() {
 
 	const checkTypeFireGrate = (e) => {
 		setTypeFireGrate(e.target.value);
+		props.updateStateTypeGrate(e.target.value);
 	};
 
 	// Stan ilości sztuk
@@ -60,8 +62,8 @@ function Calculator() {
 		inputDepthValue === '' ? setDepthValidation(true) : setDepthValidation(false)
 	};
 
-	const ShowWidthError = (widthValidation === true ? <p> ⬆ Musisz podać szerokość rusztu</p> : false);
-	const ShowDepthError = (depthValidation === true ? <p> ⬆ Musisz podać głębokość rusztu</p> : false);
+	const ShowWidthError = (widthValidation === true ? <p>⬆ Musisz podać szerokość rusztu</p> : <p></p>);
+	const ShowDepthError = (depthValidation === true ? <p>⬆ Musisz podać głębokość rusztu</p> : <p></p>);
 
 	return (
 		<div className='calculator'>
