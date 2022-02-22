@@ -68,7 +68,7 @@ function Calculator(props) {
 	return (
 		<div className='calculator'>
 			<div className='calculator__items'>
-				<div className='calculator__items--fireGrate'>
+				<div>
 					<label for='fireGrate'>Typ rusztu</label>
 					<select
 						value={typeFireGrate}
@@ -78,11 +78,9 @@ function Calculator(props) {
 						<option value='13.5'>Żeliwo szare gr. 11mm</option>
 						<option value='20.5'>Żeliwo chromowe gr. 11mm</option>
 						<option value='18.6'>Stalowy z pudłużnych prętów</option>
-						{/* <option value='34'>Ruszt stojący bez popelnika</option>
-						<option value='5'>Ruszt stojący z popelnikiem</option> */}
 					</select>
 				</div>
-				<div className='calculator__items--grateWidth'>
+				<div>
 					<label for='grateWidth'>Szerokość rusztu w cm</label>
 					<input
 						onChange={updateInputWidthHandler}
@@ -95,7 +93,7 @@ function Calculator(props) {
 					<div className='errorInfo'>{ShowWidthError}</div>
 				</div>
 
-				<div className='calculator__items--grateDepth'>
+				<div>
 					<label for='grateDepth'>Głębokość rusztu w cm</label>
 					<input
 						onChange={updateDepthValue}
@@ -108,7 +106,7 @@ function Calculator(props) {
 					<div className='errorInfo'>{ShowDepthError}</div>
 				</div>
 
-				<div className='calculator__items--fireGrateAmount'>
+				<div>
 					<label for='fireGrateAmount'>Ilość sztuk</label>
 					<select
 						value={quantity}
