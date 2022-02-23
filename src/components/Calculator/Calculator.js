@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Calculator.css';
 import CalculatorPrice from './CalculatorPrice/CalculatorPrice';
+import CustomInput from './CustomeInput/CustomInput';
+import CustomeSelect from './CustomeSelect/CustomeSelect';
 
 function Calculator(props) {
 	// Stan inputa szerokości
@@ -15,9 +17,8 @@ function Calculator(props) {
 
 	const [inputDepthValue, setInputDepthValue] = useState('');
 
-	const updateDepthValue = (e) => {
+	const updateInputDepthHandler = (e) => {
 		setInputDepthValue(e.target.value);
-		
 	};
 
 	// Stan typu rusztu
@@ -58,70 +59,93 @@ function Calculator(props) {
 	};
 
 	function validation() {
-		inputWidthValue === '' ? setWidthValidation(true) : setWidthValidation(false)
-		inputDepthValue === '' ? setDepthValidation(true) : setDepthValidation(false)
-	};
+		inputWidthValue === ''
+			? setWidthValidation(true)
+			: setWidthValidation(false);
+		inputDepthValue === ''
+			? setDepthValidation(true)
+			: setDepthValidation(false);
+	}
 
-	const ShowWidthError = (widthValidation === true ? <p>⬆ Musisz podać szerokość rusztu</p> : <p></p>);
-	const ShowDepthError = (depthValidation === true ? <p>⬆ Musisz podać głębokość rusztu</p> : <p></p>);
+	const ShowWidthError =
+		widthValidation === true ? <p>⬆ Musisz podać szerokość rusztu</p> : <p></p>;
+	const ShowDepthError =
+		depthValidation === true ? <p>⬆ Musisz podać głębokość rusztu</p> : <p></p>;
+
+
+		const map1 = new Map([
+			["13.5", "Żeliwo szare gr. 11mm'"],
+			["20.5", "Żeliwo chromowe gr. 11mm"],
+			["18.6", "Stalowy z pudłużnych prętów"],
+		]);
+		const map2 = new Map([
+			["1", "1"],
+			["2", "2"],
+			["3", "3"],
+			["4", "4"],
+			["5", "5"],
+			["6", "6"],
+			["7", "7"],
+			["8", "8"],
+			["9", "9"],
+			["10", "10"],
+		]);
+
 
 	return (
 		<div className='calculator'>
 			<div className='calculator__items'>
-				<div>
-					<label for='fireGrate'>Typ rusztu</label>
-					<select
-						value={typeFireGrate}
-						onChange={checkTypeFireGrate}
-						id='fireGrate'
-					>
-						<option value='13.5'>Żeliwo szare gr. 11mm</option>
-						<option value='20.5'>Żeliwo chromowe gr. 11mm</option>
-						<option value='18.6'>Stalowy z pudłużnych prętów</option>
-					</select>
-				</div>
-				<div>
-					<label for='grateWidth'>Szerokość rusztu w cm</label>
-					<input
-						onChange={updateInputWidthHandler}
-						id='grateWidth'
-						type='number'
-						placeholder='Podaj szerokość rusztu w cm'
-						step='0.5'
-						value={inputWidthValue}
-					></input>
-					<div className='errorInfo'>{ShowWidthError}</div>
-				</div>
+				<CustomeSelect
+					for='fireGrate'
+					title='Typ rusztu'
+					value={typeFireGrate}
+					onChange={checkTypeFireGrate}
+					values={map1}
+					id='fireGrate'
+					value1='13.5'
+					title1='Żeliwo szare gr. 11mm'
+					value2='20.5'
+					title2='Żeliwo chromowe gr. 11mm'
+					value3='18.6'
+					title3='Stalowy z pudłużnych prętów'
+				/>
 
-				<div>
-					<label for='grateDepth'>Głębokość rusztu w cm</label>
-					<input
-						onChange={updateDepthValue}
-						id='grateDepth'
-						type='number'
-						placeholder='Podaj głębokość rusztu w cm'
-						step='0.5'
-						value={inputDepthValue}
-					></input>
-					<div className='errorInfo'>{ShowDepthError}</div>
-				</div>
+				<CustomInput
+					for='grateWidth'
+					title='Szerokość rusztu w cm'
+					id='grateWidth'
+					placeholder='Podaj szerokość rusztu w cm'
+					error={ShowWidthError}
+					value={inputWidthValue}
+					update={updateInputWidthHandler}
+				/>
+				<CustomInput
+					for='grateDepth'
+					title='Głębokość rusztu w cm'
+					id='grateDepth'
+					placeholder='Podaj głębokość rusztu w cm'
+					error={ShowDepthError}
+					value={inputDepthValue}
+					update={updateInputDepthHandler}
+				/>
 
-				<div>
-					<label for='fireGrateAmount'>Ilość sztuk</label>
-					<select
-						value={quantity}
-						id='fireGrateAmount'
-						onChange={checkQuantityFireGrate}
-					>
-						<option value='1'>1</option>
-						<option value='2'>2</option>
-						<option value='3'>3</option>
-						<option value='4'>4</option>
-						<option value='5'>5</option>
-					</select>
-				</div>
+				<CustomeSelect
+					for='fireGrateAmount'
+					title='Ilość sztuk'
+					value={quantity}
+					onChange={checkQuantityFireGrate}
+					id='fireGrateAmount'
+					values={map2}
+					value1='1'
+					title1='1'
+					value2='2'
+					title2='2'
+					value3='3'
+					title3='3'
+			
+				/>
 			</div>
-			<CalculatorPrice priceHandler={priceHandler} />
+			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} />
 		</div>
 	);
 }
