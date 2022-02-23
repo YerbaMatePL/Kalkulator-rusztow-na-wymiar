@@ -13,6 +13,7 @@ export const grateTypes = [
 		img1: img1a,
 		img2: img2a,
 		img3: img3a,
+		
 		alt: {
 			alt1: 'ruszt żeliwny do kominka',
 			alt2: 'ruszt żeliwny okrągły',

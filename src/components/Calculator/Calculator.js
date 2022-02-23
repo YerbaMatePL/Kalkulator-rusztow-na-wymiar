@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calculator.css';
 import CalculatorPrice from './CalculatorPrice/CalculatorPrice';
 import CustomInput from './CustomeInput/CustomInput';
-import CustomeSelect from './CustomeSelect/CustomeSelect';
+import CustomSelect from './CustomSelect/CustomSelect';
 
 function Calculator(props) {
 	// Stan inputa szerokości
@@ -72,42 +72,35 @@ function Calculator(props) {
 	const ShowDepthError =
 		depthValidation === true ? <p>⬆ Musisz podać głębokość rusztu</p> : <p></p>;
 
+	const map1 = new Map([
+		['13.5', "Żeliwo szare gr. 11mm'"],
+		['20.5', 'Żeliwo chromowe gr. 11mm'],
+		['18.6', 'Stalowy z pudłużnych prętów'],
+	]);
 
-		const map1 = new Map([
-			["13.5", "Żeliwo szare gr. 11mm'"],
-			["20.5", "Żeliwo chromowe gr. 11mm"],
-			["18.6", "Stalowy z pudłużnych prętów"],
-		]);
-		const map2 = new Map([
-			["1", "1"],
-			["2", "2"],
-			["3", "3"],
-			["4", "4"],
-			["5", "5"],
-			["6", "6"],
-			["7", "7"],
-			["8", "8"],
-			["9", "9"],
-			["10", "10"],
-		]);
-
+	const map2 = new Map([
+		['1', '1'],
+		['2', '2'],
+		['3', '3'],
+		['4', '4'],
+		['5', '5'],
+		['6', '6'],
+		['7', '7'],
+		['8', '8'],
+		['9', '9'],
+		['10', '10'],
+	]);
 
 	return (
 		<div className='calculator'>
 			<div className='calculator__items'>
-				<CustomeSelect
+				<CustomSelect
 					for='fireGrate'
 					title='Typ rusztu'
 					value={typeFireGrate}
 					onChange={checkTypeFireGrate}
 					values={map1}
 					id='fireGrate'
-					value1='13.5'
-					title1='Żeliwo szare gr. 11mm'
-					value2='20.5'
-					title2='Żeliwo chromowe gr. 11mm'
-					value3='18.6'
-					title3='Stalowy z pudłużnych prętów'
 				/>
 
 				<CustomInput
@@ -129,20 +122,13 @@ function Calculator(props) {
 					update={updateInputDepthHandler}
 				/>
 
-				<CustomeSelect
+				<CustomSelect
 					for='fireGrateAmount'
 					title='Ilość sztuk'
 					value={quantity}
 					onChange={checkQuantityFireGrate}
 					id='fireGrateAmount'
 					values={map2}
-					value1='1'
-					title1='1'
-					value2='2'
-					title2='2'
-					value3='3'
-					title3='3'
-			
 				/>
 			</div>
 			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} />
