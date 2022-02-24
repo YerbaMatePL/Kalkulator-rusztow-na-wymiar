@@ -9,7 +9,7 @@ function CalculatorPrice(props) {
 		if (isCounted) {
 			priceHandler();
 		}
-	}, [isCounted, props.grate]); // eslint-disable-line
+	}, [isCounted, props.grate, props.quantity]); // eslint-disable-line
 
 	const priceHandler = () => {
 		const amount = props.priceHandler();

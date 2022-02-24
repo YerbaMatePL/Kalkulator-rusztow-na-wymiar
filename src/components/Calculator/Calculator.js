@@ -117,7 +117,7 @@ function Calculator(props) {
 					values={map2}
 				/>
 			</div>
-			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} themeColor={props.themeColor} />
+			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} quantity={quantity} themeColor={props.themeColor} />
 		</div>
 	);
 }
