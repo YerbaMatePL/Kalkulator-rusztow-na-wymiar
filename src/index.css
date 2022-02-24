@@ -1,8 +1,15 @@
 @import url('http://fonts.cdnfonts.com/css/squad');
 
 :root {
-  --error-color: rgb(231, 83, 83);
+  --error-color: rgba(223, 95, 78, 0.966);
   --border-img: rgb(206, 200, 200);
+  --first-color: #d0d5d881;
+  --second-color: rgba(42, 44, 42, 0.507);
+  --contrast-color: #087e0e;
+  --gradient: linear-gradient(139deg, #2e7c33ef 0%, #2fb3df 100%);
+  --bgc-info: #f3f1f16e;
+  --black-color: rgb(15, 14, 14);
+  --white-color: rgb(237, 238, 237);
 }
 
 * {
@@ -20,15 +27,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #121212;
-  background-image: linear-gradient(139deg, #246828ef 0%, #2fb3df 100%);
-  
-
+  background-image: var(--gradient);
 }
 
 .wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
+}
+
+.firstColor {
+  background-color: var(--first-color);
+  color: var(--black-color);
+}
+.secondColor {
+  background-color: var(--second-color);
+  color: var(--white-color);
 }
 

@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/lt-wave');
+
 .calculator {
 	width: 47%;
 	height: 650px;
@@ -38,9 +40,12 @@
     margin-top: 5px;
     text-align: right;
     padding: 2px;
-    font-size: 1.2rem;
+    font-size: 1.13rem;
     color: var(--error-color);
     font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: none;
+    font-family: 'LT Wave', sans-serif;
 }
 
 

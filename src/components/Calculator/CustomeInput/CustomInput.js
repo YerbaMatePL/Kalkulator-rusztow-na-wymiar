@@ -1,7 +1,7 @@
 function CustomInput(props) {
 	return (
 		<div>
-			<label for={props.for}>{props.title}</label>
+			<label htmlFor={props.labelFor}>{props.title}</label>
 			<input
 				onChange={props.update}
 				id={props.id}

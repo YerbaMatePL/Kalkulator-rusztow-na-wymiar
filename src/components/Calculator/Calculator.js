@@ -95,7 +95,7 @@ function Calculator(props) {
 		<div className='calculator'>
 			<div className='calculator__items'>
 				<CustomSelect
-					for='fireGrate'
+					labelFor='fireGrate'
 					title='Typ rusztu'
 					value={typeFireGrate}
 					onChange={checkTypeFireGrate}
@@ -104,7 +104,7 @@ function Calculator(props) {
 				/>
 
 				<CustomInput
-					for='grateWidth'
+					labelFor='grateWidth'
 					title='Szerokość rusztu w cm'
 					id='grateWidth'
 					placeholder='Podaj szerokość rusztu w cm'
@@ -113,7 +113,7 @@ function Calculator(props) {
 					update={updateInputWidthHandler}
 				/>
 				<CustomInput
-					for='grateDepth'
+					labelFor='grateDepth'
 					title='Głębokość rusztu w cm'
 					id='grateDepth'
 					placeholder='Podaj głębokość rusztu w cm'
@@ -123,7 +123,7 @@ function Calculator(props) {
 				/>
 
 				<CustomSelect
-					for='fireGrateAmount'
+					labelFor='fireGrateAmount'
 					title='Ilość sztuk'
 					value={quantity}
 					onChange={checkQuantityFireGrate}
@@ -131,7 +131,7 @@ function Calculator(props) {
 					values={map2}
 				/>
 			</div>
-			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} />
+			<CalculatorPrice priceHandler={priceHandler} grate={typeFireGrate} themeColor={props.themeColor} />
 		</div>
 	);
 }
