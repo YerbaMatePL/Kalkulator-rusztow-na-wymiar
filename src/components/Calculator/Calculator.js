@@ -61,7 +61,7 @@ function Calculator(props) {
 		depthValidation === true ? <p>⬆ Musisz podać głębokość rusztu</p> : <p></p>;
 
 	const map1 = new Map([
-		['13.5', "Żeliwo szare gr. 11mm'"],
+		['13.5', "Żeliwo szare gr. 11mm"],
 		['20.5', 'Żeliwo chromowe gr. 11mm'],
 		['18.6', 'Stalowy z pudłużnych prętów'],
 	]);
