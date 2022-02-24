@@ -5,23 +5,17 @@ import CustomInput from './CustomeInput/CustomInput';
 import CustomSelect from './CustomSelect/CustomSelect';
 
 function Calculator(props) {
-	// Stan inputa szerokości
-
 	const [inputWidthValue, setInputWidthValue] = useState('');
 
 	const updateInputWidthHandler = (e) => {
 		setInputWidthValue(e.target.value);
 	};
 
-	// Stan inputa głębokości
-
 	const [inputDepthValue, setInputDepthValue] = useState('');
 
 	const updateInputDepthHandler = (e) => {
 		setInputDepthValue(e.target.value);
 	};
-
-	// Stan typu rusztu
 
 	const [typeFireGrate, setTypeFireGrate] = useState('13.5');
 
@@ -30,20 +24,14 @@ function Calculator(props) {
 		props.updateStateTypeGrate(e.target.value);
 	};
 
-	// Stan ilości sztuk
-
 	const [quantity, setQuantity] = useState('1');
 
 	const checkQuantityFireGrate = (e) => {
 		setQuantity(parseFloat(e.target.value));
 	};
 
-	// Stan dla walidacji inputa z szerokością
-
 	const [widthValidation, setWidthValidation] = useState(false);
 	const [depthValidation, setDepthValidation] = useState(false);
-
-	// Funkcja do liczenia ceny i walidacja
 
 	const priceHandler = () => {
 		validation();
@@ -102,7 +90,6 @@ function Calculator(props) {
 					values={map1}
 					id='fireGrate'
 				/>
-
 				<CustomInput
 					labelFor='grateWidth'
 					title='Szerokość rusztu w cm'
@@ -121,7 +108,6 @@ function Calculator(props) {
 					value={inputDepthValue}
 					update={updateInputDepthHandler}
 				/>
-
 				<CustomSelect
 					labelFor='fireGrateAmount'
 					title='Ilość sztuk'

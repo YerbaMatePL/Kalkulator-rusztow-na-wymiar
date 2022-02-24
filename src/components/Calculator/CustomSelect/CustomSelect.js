@@ -6,7 +6,7 @@ function CustomSelect(props) {
 			<label htmlFor={props.labelFor}>{props.title}</label>
 			<select value={props.value} onChange={props.onChange} id={props.id}>
 				{Array.from(values).map((option) => {
-					return <option value={option[0]}>{option[1]}</option>;
+					return <option key={option} value={option[0]}>{option[1]}</option>;
 				})}
 			</select>
 		</div>
