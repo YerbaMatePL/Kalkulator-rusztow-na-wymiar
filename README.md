@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Kalkulator rusztów na wymiar 
+Prosta aplikacja wykonana w React.js, która umożliwa użytkownikowi obliczenie ceny za produkt na podstawie podanych przez niego parametrów. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ ## Spis treści
+* [Instalacja](#instalacja)
+* [O aplikacji](#o-aplikacji)
+* [Języki i narzędzia](#języki-i-narzędzia)
+* [Czego nauczył mnie ten projekt](#czego-nauczył-mnie-ten-projekt)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Instalacja 
+Tu opiszę instalację. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## O aplikacji
+Aplikacja jest przykładem kalkulatora produktów. Może być użyta w sklepie internetowym, który zajmuje się produkcją towarów na wymiar - w tym przypadku są to ruszty do kominka. **Klient wybiera na początku typ rusztu, następnie podaje potrzebne wymiary (szerokość i głębokość) rusztu oraz wybiera potrzebną ilość sztuk. Kalkulator oblicza cenę, jaką klient powinien zapłacić za taki produkt** Dodatkowo podczas wybierania typu rusztu klientowi wyświetlają się informację o tym produkcie - zdjęcia oraz opis. Użytkownik ma również możliwość wyboru motywu aplikacji - jasnego, bądź ciemnego. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![ruszty-light](https://user-images.githubusercontent.com/90143181/155708433-510a2b86-404e-4cc8-9fcd-196d90a566cc.png)
+![Ruszty dark](https://user-images.githubusercontent.com/90143181/155708419-4c36ef0e-516a-4635-948c-4190390b5bb2.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Języki i narzędzia
+<p float="left">
+REACT.JS 17.0.2 <img src="https://user-images.githubusercontent.com/90143181/155710762-98754e3e-27fa-42fc-b1d2-b4976022ff8f.png" width="40" height="40">&nbsp
+CSS3<img src="https://user-images.githubusercontent.com/90143181/155710948-14bf50e8-30b5-47f3-8151-9fc80556c0ed.png" width="40" height="40">&nbsp HTML5<img src="https://user-images.githubusercontent.com/90143181/155709360-40a94a88-a7ea-4d82-ba0c-f51aec3b3ff4.png" width="40" height="40"><br>NODE.JS <img src="https://user-images.githubusercontent.com/90143181/155711643-97bc4f8c-0460-4dd7-b4da-8cd79a08a2e3.png" width="40" height="40">&nbsp&nbsp&nbsp&nbsp GIT <img src="https://user-images.githubusercontent.com/90143181/155712064-fd173cb7-8581-4e16-bf99-194e4ac2be55.png" width="40" height="20"></p>
 
-### `npm run build`
+## Czego nauczył mnie ten projekt
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tworzenia i wydzielania komponetów,
+- Zarządzania stanem,
+- Obsługi zdarzeń,
+- Pracy z hookami,
+- Pracy z GITem (za pomocą programu SourceTree).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
