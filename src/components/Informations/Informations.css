@@ -20,6 +20,12 @@
     height: 160px;
     border: 1px solid var(--border-img);
     object-fit: cover;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.informations__imgs--img:hover{
+    transform: scale(2.2);
 }
 
 .informations__description {
