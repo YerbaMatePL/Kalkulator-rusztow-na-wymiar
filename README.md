@@ -10,7 +10,19 @@ Prosta aplikacja wykonana w React.js, która umożliwa użytkownikowi obliczenie
 
 
 ## Instalacja 
-Tu opiszę instalację. 
+Instalacja aplikacji opiera się na menadżerze pakietów [npm](https://www.npmjs.com/).
+```bash
+git clone https://github.com/YerbaMatePL/REACT-Kalkulator-rusztow-na-wymiar
+cd kalkulator-rusztow
+npm install
+```
+Aby uruchomić aplikację użyj 
+```bash
+npm start
+```
+
+
+
 
 ## O aplikacji
 Aplikacja jest przykładem kalkulatora produktów. Może być użyta w sklepie internetowym, który zajmuje się produkcją towarów na wymiar - w tym przypadku są to ruszty do kominka. **Klient wybiera na początku typ rusztu, następnie podaje potrzebne wymiary (szerokość i głębokość) rusztu oraz wybiera potrzebną ilość sztuk. Kalkulator oblicza cenę, jaką klient powinien zapłacić za taki produkt** Dodatkowo podczas wybierania typu rusztu klientowi wyświetlają się informację o tym produkcie - zdjęcia oraz opis. Użytkownik ma również możliwość wyboru motywu aplikacji - jasnego, bądź ciemnego. 
