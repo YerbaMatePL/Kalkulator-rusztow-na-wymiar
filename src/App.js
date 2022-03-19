@@ -3,7 +3,7 @@ import Card from './components/Card/Card';
 
 function App() {
   return (
-    <div className='app wrappe'>
+    <div className='app wrapper'>
       <Card></Card>
     </div>
   );
