@@ -1,6 +1,8 @@
 # Kalkulator rusztów na wymiar 
 Prosta aplikacja wykonana w React.js, która umożliwa użytkownikowi obliczenie ceny za produkt na podstawie podanych przez niego parametrów. 
 
+👉 Sprawdź podgląd na żywo: https://yerbamatepl.github.io/REACT-Kalkulator-rusztow-na-wymiar/
+
  ## Spis treści
 * [Instalacja](#instalacja)
 * [O aplikacji](#o-aplikacji)
