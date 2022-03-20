@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/REACT-Kalkulator-rusztow-na-wymiar/precache-manifest.135a594e8ad720ffbe01a96a4ceb95a4.js"
+  "/REACT-Kalkulator-rusztow-na-wymiar/precache-manifest.2318dc19d26bde07f2585b610ea4c515.js"
 );
 
 workbox.clientsClaim();

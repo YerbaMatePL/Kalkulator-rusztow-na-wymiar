@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "2b1b982f59b706ba0f5b",
-    "url": "/REACT-Kalkulator-rusztow-na-wymiar/static/css/main.fdb5f462.chunk.css"
+    "revision": "e41127870b1f2b9e357b",
+    "url": "/REACT-Kalkulator-rusztow-na-wymiar/static/css/main.cfb5ea33.chunk.css"
   },
   {
-    "revision": "2b1b982f59b706ba0f5b",
+    "revision": "e41127870b1f2b9e357b",
     "url": "/REACT-Kalkulator-rusztow-na-wymiar/static/js/main.5472a4d5.chunk.js"
   },
   {
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/REACT-Kalkulator-rusztow-na-wymiar/static/media/ruszt_kominkowy_na_wymiar.38908098.png"
   },
   {
-    "revision": "4ba56239ff7cfe6802b23057a8cb63cb",
+    "revision": "eee7b805e786a2def78c85487fdd2127",
     "url": "/REACT-Kalkulator-rusztow-na-wymiar/index.html"
   }
 ];
