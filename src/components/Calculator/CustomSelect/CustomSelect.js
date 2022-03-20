@@ -1,3 +1,5 @@
+import React from 'react';
+
 function CustomSelect(props) {
 	const values = props.values;
 

@@ -1,5 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/squad');
-
 :root {
   --error-color: rgba(223, 95, 78, 0.966);
   --border-img: rgb(206, 200, 200);
@@ -19,7 +17,7 @@
 }
 
 html {
-  font-family: 'Squad', sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10px;
 }
 
